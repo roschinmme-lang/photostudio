@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Babies — Little Smile Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="gallery.css"/>
+</head>
+<body>
+<div class="deco-border"></div>
+<div class="sidebar-tabs">
+  <a class="tab-btn" href="babies.html"><span class="tab-icon">👶</span>Babies</a>
+  <a class="tab-btn" href="adults.html"><span class="tab-icon">🧑</span>Adults</a>
+  <a class="tab-btn" href="families.html"><span class="tab-icon">👨‍👩‍👧</span>Families</a>
+  <a class="tab-btn" href="themes.html"><span class="tab-icon">🎨</span>Themes</a>
+  <button class="tab-btn" onclick="document.getElementById('contact-modal').classList.add('open')"><span class="tab-icon">📞</span>Contact</button>
+</div>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-left">
+      <div class="top-follow">Follow Us</div>
+      <div class="social-icons">
+        <a class="social-icon" href="https://www.facebook.com/littlesmilestudiophotography" target="_blank">f</a>
+        <a class="social-icon" href="https://www.instagram.com/littlesmile_photographystudio" target="_blank">ig</a>
+      </div>
+    </div>
+    <div class="studio-brand">
+      <div class="brand-script">Little Smile Studio</div>
+      <div class="brand-name">Photography</div>
+      <div class="brand-sub">Fine Portraiture · Philippines</div>
+    </div>
+    <div class="top-right">
+      <div class="top-right-label">Contact Us</div>
+      <div class="top-right-phone">📞 +63 (0994) 953 1558</div>
+      <div class="top-right-address">#09 Sineguelas St., General Santos City, 9500</div>
+    </div>
+  </div>
+</div>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link active" href="babies.html">Babies</a>
+    <a class="nav-link " href="adults.html">Adults & Teens</a>
+    <a class="nav-link " href="families.html">Families</a>
+    <a class="nav-link " href="themes.html">Themes</a>
+    <a class="nav-link" href="#" onclick="document.getElementById('contact-modal').classList.add('open');return false;">Contact Us</a>
+  </div>
+</nav>
+<div class="page-hero">
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+</style>
+
+<div class="page-hero-icon">
+  <img src="littlesmilepics/logo.jpg" alt="Little Smile Logo" class="png-icon" />
+</div>
+  <div class="page-hero-title">Babies</div>
+  <div class="page-hero-sub">Newborns · Infants · Toddlers</div>
+  <div class="page-hero-divider"></div>
+</div>
+<div class="gallery-wrap">
+  <div class="photo-grid" id="grid-babies">
+    <!-- ══ ADD YOUR BABY PHOTOS HERE ══
+         Copy this block and paste it for each photo.
+         Replace the file path, title, and description. -->
+
+<div class="photo-card reveal" onclick="openLightbox('littlesmilepics/Army.JPG', 'Sleepy Newborn', 'A peaceful newborn session.')">
+  <div class="photo-card-img">
+    <img src="littlesmilepics/Army.JPG" alt="Sleepy Newborn" onerror="this.parentElement.innerHTML='<div style=&quot;font-size:48px&quot;>👶</div>'" />
+  </div>
+  <div class="photo-card-body">
+    <div class="photo-card-title">Sleepy Newborn</div>
+    <div class="photo-card-desc">A peaceful newborn session.</div>
+  </div>
+</div>
+    
+
+<div class="photo-card reveal" onclick="openLightbox('littlesmilepics/Alladin.JPG', 'Sleepy Newborn', 'A peaceful newborn session.')">
+  <div class="photo-card-img">
+    <img src="littlesmilepics/Alladin.JPG" alt="Sleepy Newborn" onerror="this.parentElement.innerHTML='<div style=&quot;font-size:48px&quot;>👶</div>'" />
+  </div>
+  <div class="photo-card-body">
+    <div class="photo-card-title">Sleepy Newborn</div>
+    <div class="photo-card-desc">A peaceful newborn session.</div>
+  </div>
+</div>    
+
+  <div class="photo-card reveal" onclick="openLightbox('littlesmilepics/Avengers.JPG', 'Sleepy Newborn', 'A peaceful newborn session.')">
+  <div class="photo-card-img">
+    <img src="littlesmilepics/Avengers.JPG" alt="Sleepy Newborn" onerror="this.parentElement.innerHTML='<div style=&quot;font-size:48px&quot;>👶</div>'" />
+  </div>
+  <div class="photo-card-body">
+    <div class="photo-card-title">Sleepy Newborn</div>
+    <div class="photo-card-desc">A peaceful newborn session.</div>
+  </div>
+</div>
+  </div>
+</div>
+<footer>
+  <div class="footer-brand">Little Smile Studio</div>
+  <div class="footer-sub">Photography · Fine Portraiture · Philippines</div>
+  <div class="footer-socials">
+    <a class="social-icon" href="https://www.facebook.com/littlesmilestudiophotography" target="_blank">f</a>
+    <a class="social-icon" href="https://www.instagram.com/littlesmile_photographystudio" target="_blank">ig</a>
+  </div>
+  <div class="footer-copy">© 2025 Little Smile Studio · All rights reserved</div>
+</footer>
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <div class="lightbox-img" id="lb-img"></div>
+    <div class="lightbox-body">
+      <div class="lightbox-title" id="lb-title"></div>
+      <div class="lightbox-desc" id="lb-desc"></div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="contact-modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal" style="position:relative">
+    <button class="modal-close" onclick="document.getElementById('contact-modal').classList.remove('open')">✕</button>
+    <div class="modal-header"><div class="script">Get In Touch</div><div class="sub">We'd love to capture your story</div></div>
+    <div class="modal-body">
+      <div style="font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--teal-dark);margin-bottom:4px;">📞 +63 (0994) 953 1558</div>
+      <div style="font-family:var(--font-display);font-size:11px;color:var(--gray);margin-bottom:16px;">#09 Sineguelas St., General Santos City, 9500</div>
+      <div style="border-top:1px solid var(--teal-light);padding-top:20px;">
+        <div style="font-family:var(--font-display);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);margin-bottom:12px;">Follow Us</div>
+        <div style="display:flex;gap:10px;justify-content:center;">
+          <a class="social-icon" href="https://www.facebook.com/littlesmilestudiophotography" target="_blank">f</a>
+          <a class="social-icon" href="https://www.instagram.com/littlesmile_photographystudio" target="_blank">ig</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function openLightbox(src,title,desc){
+  document.getElementById('lb-img').innerHTML='<img src="'+src+'" onerror="this.style.display=\'none\'"/>';
+  document.getElementById('lb-title').textContent=title||'';
+  document.getElementById('lb-desc').textContent=desc||'';
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox(e){if(!e||e.target===document.getElementById('lightbox'))document.getElementById('lightbox').classList.remove('open');}
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
